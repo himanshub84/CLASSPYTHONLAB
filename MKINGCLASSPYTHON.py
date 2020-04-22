@@ -112,13 +112,13 @@ class Time:
     def displaytime(self):
         self.tothr=self.hour + self.hour1
         self.totmin=self.min + self.min1
-        print(self.tothr,"Hour and ",self.totmin,"min")
+        if self.totmin>60:
+            a=int((self.totmin)/60)
+            b=int((self.totmin)%60)
+
+        print((self.tothr)+a,"Hour and ",b,"min")
     def displaymin(self):
         return (60*self.tothr+self.totmin)
-
-
-
-
 b1 = Time()
 b1.addTime()
 print("The Total Time is")
